@@ -86,61 +86,7 @@
 
             <div class="servicios-grid catalogo-grid">
 
-                <article class="servicio-card">
-                    <div class="servicio-icono">🏥</div>
-                    <h3>Clínica universitaria</h3>
-                    <p>
-                        Atención y orientación de salud
-                        para la comunidad estudiantil.
-                    </p>
-                    <span class="estado-servicio">Disponible</span>
-                    <a href="horarios.html">Consultar horarios →</a>
-                </article>
-
-                <article class="servicio-card">
-                    <div class="servicio-icono">📚</div>
-                    <h3>Asesoría académica</h3>
-                    <p>
-                        Orientación y apoyo para resolver
-                        necesidades académicas.
-                    </p>
-                    <span class="estado-servicio">Disponible</span>
-                    <a href="horarios.html">Consultar horarios →</a>
-                </article>
-
-                <article class="servicio-card">
-                    <div class="servicio-icono">🎓</div>
-                    <h3>Bienestar universitario</h3>
-                    <p>
-                        Servicios de orientación y apoyo
-                        para los estudiantes.
-                    </p>
-                    <span class="estado-servicio">Disponible</span>
-                    <a href="horarios.html">Consultar horarios →</a>
-                </article>
-
-                <article class="servicio-card">
-                    <div class="servicio-icono">📖</div>
-                    <h3>Biblioteca universitaria</h3>
-                    <p>
-                        Información y orientación sobre
-                        los servicios bibliotecarios.
-                    </p>
-                    <span class="estado-servicio">Disponible</span>
-                    <a href="horarios.html">Consultar horarios →</a>
-                </article>
-
-                <article class="servicio-card">
-                    <div class="servicio-icono">🏢</div>
-                    <h3>Atención administrativa</h3>
-                    <p>
-                        Orientación para trámites y
-                        consultas administrativas.
-                    </p>
-                    <span class="estado-servicio">Disponible</span>
-                    <a href="horarios.html">Consultar horarios →</a>
-                </article>
-
+              
             </div>
 
             <p id="sinResultados" class="sin-resultados">
@@ -154,34 +100,9 @@
         </footer>
 
     </main>
-
-    <script>
-        const buscador = document.getElementById("buscarServicio");
-        const tarjetas = document.querySelectorAll(".catalogo-grid .servicio-card");
-        const mensaje = document.getElementById("sinResultados");
-
-        buscador.addEventListener("input", function() {
-
-            const texto = buscador.value.toLowerCase();
-            let encontrados = 0;
-
-            tarjetas.forEach(function(tarjeta) {
-
-                const contenido = tarjeta.textContent.toLowerCase();
-
-                if (contenido.includes(texto)) {
-                    tarjeta.style.display = "block";
-                    encontrados++;
-                } else {
-                    tarjeta.style.display = "none";
-                }
-
-            });
-
-            mensaje.style.display = encontrados === 0 ? "block" : "none";
-
-        });
-    </script>
+<script src="js/api.js"></script>
+<script src="js/servicios.js"></script>
+  
 
 </body>
 </html>
