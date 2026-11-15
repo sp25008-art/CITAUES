@@ -1,0 +1,187 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CITAUES | Servicios universitarios</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body class="dashboard-body">
+
+    <!-- MENÚ LATERAL -->
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+            <div class="logo">C</div>
+            <span>CITAUES</span>
+        </div>
+
+        <p class="menu-titulo">MENÚ PRINCIPAL</p>
+
+        <nav class="menu">
+            <a href="dashboard.html">⌂ Inicio</a>
+            <a href="servicios.html" class="activo">▣ Servicios universitarios</a>
+            <a href="horarios.html">▦ Reservar cita</a>
+            <a href="mis-citas.html">◷ Mis citas</a>
+            <a href="historial.html">▤ Historial</a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <a href="index.html">↪ Cerrar sesión</a>
+        </div>
+
+    </aside>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="contenido-dashboard">
+
+        <header class="topbar">
+            <div>
+                <h2>Servicios universitarios</h2>
+                <p>Universidad de El Salvador</p>
+            </div>
+
+            <div class="usuario">
+                <div class="avatar">E</div>
+                <div>
+                    <strong>Estudiante</strong>
+                    <small>Usuario CITAUES</small>
+                </div>
+            </div>
+        </header>
+
+        <!-- PRESENTACIÓN -->
+        <section class="bienvenida">
+            <div>
+                <h1>Servicios disponibles</h1>
+                <p>
+                    Encuentra el servicio universitario que necesitas
+                    y solicita tu cita fácilmente.
+                </p>
+            </div>
+
+            <div class="bienvenida-icono">🎓</div>
+        </section>
+
+        <!-- BUSCADOR -->
+        <section class="buscador-servicios">
+            <input
+                type="text"
+                id="buscarServicio"
+                placeholder="Buscar un servicio universitario..."
+            >
+        </section>
+
+        <!-- CATÁLOGO -->
+        <section class="seccion-servicios">
+
+            <div class="titulo-seccion">
+                <div>
+                    <h2>Catálogo de servicios</h2>
+                    <p>Selecciona una de las opciones disponibles.</p>
+                </div>
+            </div>
+
+            <div class="servicios-grid catalogo-grid">
+
+                <article class="servicio-card">
+                    <div class="servicio-icono">🏥</div>
+                    <h3>Clínica universitaria</h3>
+                    <p>
+                        Atención y orientación de salud
+                        para la comunidad estudiantil.
+                    </p>
+                    <span class="estado-servicio">Disponible</span>
+                    <a href="horarios.html">Consultar horarios →</a>
+                </article>
+
+                <article class="servicio-card">
+                    <div class="servicio-icono">📚</div>
+                    <h3>Asesoría académica</h3>
+                    <p>
+                        Orientación y apoyo para resolver
+                        necesidades académicas.
+                    </p>
+                    <span class="estado-servicio">Disponible</span>
+                    <a href="horarios.html">Consultar horarios →</a>
+                </article>
+
+                <article class="servicio-card">
+                    <div class="servicio-icono">🎓</div>
+                    <h3>Bienestar universitario</h3>
+                    <p>
+                        Servicios de orientación y apoyo
+                        para los estudiantes.
+                    </p>
+                    <span class="estado-servicio">Disponible</span>
+                    <a href="horarios.html">Consultar horarios →</a>
+                </article>
+
+                <article class="servicio-card">
+                    <div class="servicio-icono">📖</div>
+                    <h3>Biblioteca universitaria</h3>
+                    <p>
+                        Información y orientación sobre
+                        los servicios bibliotecarios.
+                    </p>
+                    <span class="estado-servicio">Disponible</span>
+                    <a href="horarios.html">Consultar horarios →</a>
+                </article>
+
+                <article class="servicio-card">
+                    <div class="servicio-icono">🏢</div>
+                    <h3>Atención administrativa</h3>
+                    <p>
+                        Orientación para trámites y
+                        consultas administrativas.
+                    </p>
+                    <span class="estado-servicio">Disponible</span>
+                    <a href="horarios.html">Consultar horarios →</a>
+                </article>
+
+            </div>
+
+            <p id="sinResultados" class="sin-resultados">
+                No se encontraron servicios.
+            </p>
+
+        </section>
+
+        <footer class="dashboard-footer">
+            CITAUIS © 2026 | Universidad de El Salvador
+        </footer>
+
+    </main>
+
+    <script>
+        const buscador = document.getElementById("buscarServicio");
+        const tarjetas = document.querySelectorAll(".catalogo-grid .servicio-card");
+        const mensaje = document.getElementById("sinResultados");
+
+        buscador.addEventListener("input", function() {
+
+            const texto = buscador.value.toLowerCase();
+            let encontrados = 0;
+
+            tarjetas.forEach(function(tarjeta) {
+
+                const contenido = tarjeta.textContent.toLowerCase();
+
+                if (contenido.includes(texto)) {
+                    tarjeta.style.display = "block";
+                    encontrados++;
+                } else {
+                    tarjeta.style.display = "none";
+                }
+
+            });
+
+            mensaje.style.display = encontrados === 0 ? "block" : "none";
+
+        });
+    </script>
+
+</body>
+</html>
