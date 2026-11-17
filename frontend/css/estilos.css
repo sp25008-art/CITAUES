@@ -989,55 +989,150 @@ form button:hover {
 
 
 
-/* REDISENO CITAUES: paleta azul petroleo, jade, coral y marfil */
-:root{--cita-ink:#243447;--cita-primary:#176B67;--cita-primary-dark:#10514E;--cita-accent:#D98265;--cita-bg:#F4F6F2;--cita-muted:#718078;--cita-border:#DCE5DF;--cita-soft:#E8F2EE;--cita-shadow:0 12px 32px rgba(36,52,71,.08)}
-body{font-family:"Segoe UI",Arial,sans-serif;background:var(--cita-bg);color:var(--cita-ink)}
-.contenedor-login{max-width:1080px;border-radius:24px;box-shadow:0 22px 55px rgba(36,52,71,.14)}
-.panel-informacion,.bienvenida{background:linear-gradient(135deg,#243447 0%,#176B67 100%)}
-.panel-informacion{padding:52px}
-.logo{background:var(--cita-accent);color:#243447;border-radius:15px}
-.mensaje{background:rgba(255,255,255,.10);border-left-color:var(--cita-accent);border-radius:0 12px 12px 0}
-.formulario h2,form label,.topbar h2,.usuario strong,.titulo-seccion h2,.citas-recientes h2,.tarjeta-resumen h2,.servicio-card h3,.sin-citas h3,.reserva-titulo h2,.campo-reserva label,.seccion-horarios h3,.resumen-reserva h3,.resumen-reserva span{color:var(--cita-ink)}
-form input,.buscador-servicios input,.campo-reserva input,.campo-reserva select,.campo-reserva textarea,.filtros-historial select{border:1px solid var(--cita-border);border-radius:11px;background:#FBFCFA;transition:border-color .2s,box-shadow .2s}
-form input:focus,.buscador-servicios input:focus,.campo-reserva input:focus,.campo-reserva select:focus,.campo-reserva textarea:focus{outline:none;border-color:var(--cita-primary);box-shadow:0 0 0 4px rgba(23,107,103,.12)}
-form button,.boton-reservar,.boton-confirmar,.enlace-nueva-cita{background:var(--cita-primary);border-radius:11px;transition:.2s}
-form button:hover,.boton-reservar:hover,.boton-confirmar:hover,.enlace-nueva-cita:hover{background:var(--cita-primary-dark);transform:translateY(-1px);box-shadow:0 7px 16px rgba(23,107,103,.18)}
-.dashboard-body{background:var(--cita-bg)}
-.sidebar{background:#243447;padding:30px 18px;box-shadow:5px 0 24px rgba(36,52,71,.08)}
-.menu-titulo{color:#A8CFC3;text-transform:uppercase;letter-spacing:1.5px}
-.menu a,.sidebar-footer a{border-radius:11px;transition:background .2s,transform .2s}
-.menu a:hover,.menu a.activo{background:var(--cita-primary);transform:translateX(3px)}
-.contenido-dashboard{padding:34px clamp(18px,4vw,48px)}
-.topbar p,.usuario small,.titulo-seccion p,.tarjeta-resumen p,.servicio-card p,.sin-citas p,.reserva-titulo p,.seccion-horarios p,.resumen-reserva p{color:var(--cita-muted)}
-.bienvenida{border-radius:20px;padding:38px;box-shadow:var(--cita-shadow)}
-.tarjeta-resumen,.servicio-card,.reserva-contenedor,.mis-citas-contenedor,.historial-contenedor,.sin-citas,.sin-resultados{background:#fff;border:1px solid rgba(220,229,223,.85);border-radius:17px;box-shadow:var(--cita-shadow)}
-.tarjeta-resumen,.servicio-card{transition:transform .22s,box-shadow .22s}
-.tarjeta-resumen:hover,.servicio-card:hover{transform:translateY(-4px);box-shadow:0 17px 35px rgba(36,52,71,.12)}
-.icono-tarjeta{border-radius:14px}
-.azul{background:#E5EFED;color:var(--cita-primary)}
-.verde{background:#E7F1E8;color:#477A55}
-.naranja{background:#F9EAE3;color:#B9684F}
-.titulo-seccion a,.servicio-card a{color:var(--cita-primary)}
-.titulo-seccion a:hover,.servicio-card a:hover{color:var(--cita-accent)}
-.catalogo-grid .servicio-card{min-height:265px;padding:26px}
-.servicio-icono{display:inline-flex;align-items:center;justify-content:center;width:54px;height:54px;background:var(--cita-soft);border-radius:16px}
-.estado-servicio{background:#E4F2E9;color:#34724B;border-radius:30px}
-.reserva-contenedor,.mis-citas-contenedor,.historial-contenedor{padding:clamp(20px,3vw,32px)}
-.horario-opcion{border:1px solid #B7D3CA;border-radius:11px;background:#F2F8F5;color:var(--cita-ink);transition:.2s}
-.horario-opcion:hover{background:#E0EFE9;border-color:var(--cita-primary)}
-.horario-opcion.seleccionado{background:var(--cita-primary);border-color:var(--cita-primary);color:#fff}
-.mensaje-horarios,.resumen-reserva{background:#F0F5F1;border-radius:13px}
-.tabla-citas{border-collapse:separate;border-spacing:0}
-.tabla-citas th{background:#E8F0EC;color:#31483F;font-weight:700}
-.tabla-citas td{border-bottom:1px solid var(--cita-border);color:#53645B}
-.tabla-citas tr:hover td{background:#F6F9F6}
-.estado-pendiente{background:#FFF1D9;color:#94641D}
-.estado-cancelada{background:#FBE8E4;color:#A84F40}
-.estado-completada{background:#E4F2E9;color:#34724B}
-.boton-reprogramar{background:#E5EFED;color:#176B67;border-radius:8px}
-.boton-cancelar{background:#FBE8E4;color:#A84F40;border-radius:8px}
-.filtros-historial select{color:var(--cita-ink)}
-.dashboard-footer{color:var(--cita-muted)}
-a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid rgba(217,130,101,.65);outline-offset:2px}
-@media(max-width:900px){.contenido-dashboard{padding:26px 22px}.bienvenida{padding:28px}}
-@media(max-width:650px){.panel-informacion{padding:30px 25px}.sidebar{padding:20px 16px}.menu{gap:6px}.menu a{padding:12px}.topbar{flex-wrap:wrap;align-items:flex-start}.bienvenida{gap:18px;align-items:flex-start;padding:24px}.bienvenida-icono{font-size:40px}.resumen,.servicios-grid{grid-template-columns:1fr}.horarios-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+/* =================================
+   PANEL ADMINISTRATIVO CITAUES
+================================= */
+
+.admin-bienvenida {
+    background: #0D3B66;
+    color: white;
+    padding: 30px;
+    border-radius: 14px;
+    margin-bottom: 25px;
+}
+
+.admin-bienvenida h1 {
+    font-size: 27px;
+    margin-bottom: 10px;
+}
+
+.admin-bienvenida p {
+    color: #DCEBFA;
+}
+
+.admin-resumen {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(150px, 1fr));
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.admin-tarjeta {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(13,59,102,0.06);
+}
+
+.admin-tarjeta p {
+    color: #8492A6;
+    font-size: 13px;
+}
+
+.admin-tarjeta h2 {
+    color: #0D3B66;
+    font-size: 27px;
+    margin-top: 10px;
+}
+
+.admin-contenedor {
+    background: white;
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 3px 12px rgba(13,59,102,0.06);
+    margin-bottom: 25px;
+}
+
+.admin-contenedor h2 {
+    color: #0D3B66;
+    margin-bottom: 10px;
+}
+
+.admin-descripcion {
+    color: #8492A6;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.admin-tabla {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 750px;
+}
+
+.admin-tabla th {
+    background: #0D3B66;
+    color: white;
+    padding: 14px 10px;
+    text-align: left;
+    font-size: 13px;
+}
+
+.admin-tabla td {
+    padding: 14px 10px;
+    border-bottom: 1px solid #E6EDF5;
+    color: #52657A;
+    font-size: 13px;
+}
+
+.admin-tabla tr:hover {
+    background: #F3F7FC;
+}
+
+.admin-estado {
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.admin-pendiente {
+    background: #FFF0DC;
+    color: #A66B12;
+}
+
+.admin-confirmada {
+    background: #E4F1FF;
+    color: #1764B0;
+}
+
+.admin-cancelada {
+    background: #FDE7E7;
+    color: #C03939;
+}
+
+.admin-finalizada {
+    background: #DDF7EF;
+    color: #13866E;
+}
+
+.admin-vacio {
+    text-align: center;
+    padding: 30px;
+    color: #8492A6;
+}
+
+.admin-tabla-contenedor {
+    overflow-x: auto;
+}
+
+@media (max-width: 1100px) {
+    .admin-resumen {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 650px) {
+    .admin-resumen {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-contenedor {
+        padding: 16px;
+    }
+
+    .admin-bienvenida h1 {
+        font-size: 22px;
+    }
+}
