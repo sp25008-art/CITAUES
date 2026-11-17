@@ -33,12 +33,12 @@ if (formulario) {
             });
 
             const resultado = await respuesta.json();
-
             if (resultado.exito) {
-                window.location.href = "dashboard.php";
-            } else {
-                alert(resultado.mensaje);
-            }
+    window.location.href = resultado.redireccion;
+} else {
+    alert(resultado.mensaje);
+}
+            
 
         } catch (error) {
             console.error(error);
