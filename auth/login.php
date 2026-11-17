@@ -98,7 +98,11 @@ responder(true, "Inicio de sesión exitoso.", [
         "nombres" => $nombre,
         "rol" => $rol
     ],
-    "redireccion" => "../frontend/admin.php"
+    "redireccion" => (
+    $rol === "ADMINISTRADOR"
+        ? "../frontend/admin.php"
+        : "../frontend/dashboard.php"
+)
 ]);
 
 ?>
